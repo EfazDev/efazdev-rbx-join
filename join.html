@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joining Server!</title>
+    <link rel="stylesheet" href="https://cdn.efaz.dev/cdn/styles/htmlUI.css">
+    <script>
+        function teleport() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let queryArray = [];
+            urlParams.forEach((value, key) => {
+                queryArray.push(`${key}=${value}`);
+            });
+            const formattedQuery = `?${queryArray.join('&')}`;
+            window.location.href = `roblox://experiences/start${formattedQuery}`;
+        }
+        teleport()
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Roblox should launch soon!</h1>
+        <button onclick="teleport()">Click here if not launching.</button>
+        <p>[This data is not shared to anyone and this link is behind Cloudflare!]</p>
+    </div>
+</body>
+
+</html>
