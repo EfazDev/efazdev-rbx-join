@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joining Server!</title>
+    <link rel="stylesheet" href="https://cdn.efaz.dev/cdn/styles/htmlUI.css">
+    <script>
+        function teleport() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let queryArray = [];
+            if (urlParams.get("navigator")) {
+                var stored_navigator = urlParams.get("navigator")
+                urlParams.set("navigator", null)
+                urlParams.forEach((value, key) => {
+                    if (value) {
+                        queryArray.push(`${key}=${value}`);
+                    }
+                });
+                const formattedQuery = `?${queryArray.join('&')}`;
+                window.location.href = `roblox://navigation/${urlParams.get("navigator")}${formattedQuery}`;
+            }
+        }
+        window.onload = teleport
+    </script>
+</head>
+
+<body>
+    <div>
+        <img src="https://cdn.efaz.dev/cdn/png/logo.png" height="64" width="64" class="center">
+        <h1>Roblox should launch soon!</h1>
+        <a onclick="teleport()" style="display: flex;align-items: center;justify-content: center;text-align: center;">If Roblox is not launching, make sure it's installed correctly!</a>
+    </div>
+</body>
+
+</html>
