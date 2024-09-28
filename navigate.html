@@ -19,7 +19,7 @@
                     }
                 });
                 const formattedQuery = `?${queryArray.join('&')}`;
-                window.location.href = `roblox://navigation/${urlParams.get("navigator")}${formattedQuery}`;
+                window.location.href = `roblox://navigation/${stored_navigator}${formattedQuery}`;
             }
         }
         window.onload = teleport
