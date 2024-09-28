@@ -4,22 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading Navigator!</title>
+    <title>Opening Roblox Player!</title>
     <link rel="stylesheet" href="https://cdn.efaz.dev/cdn/styles/htmlUI.css">
     <script>
         function teleport() {
             const urlParams = new URLSearchParams(window.location.search);
             let queryArray = [];
-            if (urlParams.get("navigator")) {
-                var stored_navigator = urlParams.get("navigator")
-                urlParams.set("navigator", null)
-                urlParams.forEach((value, key) => {
-                    if (value) {
-                        queryArray.push(`${key}=${value}`);
-                    }
-                });
-                const formattedQuery = `?${queryArray.join('&')}`;
-                window.location.href = `roblox://navigation/${stored_navigator}${formattedQuery}`;
+            if (urlParams.get("info")) {
+                window.location.href = `roblox-player:${urlParams.get("info")}`;
             }
         }
         window.onload = teleport
