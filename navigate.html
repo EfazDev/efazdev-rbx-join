@@ -15,7 +15,7 @@
                 urlParams.set("navigator", null)
                 urlParams.forEach((value, key) => {
                     if (value) {
-                        queryArray.push(`${key}=${value}`);
+                        queryArray.push(`${key}=${decodeURI(value)}`);
                     }
                 });
                 const formattedQuery = `?${queryArray.join('&')}`;
