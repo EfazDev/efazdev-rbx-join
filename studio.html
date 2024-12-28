@@ -13,6 +13,7 @@
             if (urlParams.get("info")) {
                 urlParams.set("info", decodeURI(urlParams.get("info")))
                 var link = `roblox-studio:${urlParams.get("info")}`
+                link = link.replace(" ", "+")
                 window.location.href = link;
                 console.log(`Started Roblox Studio! Link: ${link}`)
             }
