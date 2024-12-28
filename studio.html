@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening Roblox Player!</title>
+    <link rel="stylesheet" href="https://cdn.efaz.dev/cdn/styles/htmlUI.css">
+    <script>
+        function teleport() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let queryArray = [];
+            if (urlParams.get("info")) {
+                window.location.href = `roblox-studio:${urlParams.get("info")}`;
+            }
+        }
+        window.onload = teleport
+    </script>
+</head>
+
+<body>
+    <div>
+        <img src="https://cdn.efaz.dev/cdn/png/logo.png" height="64" width="64" class="center">
+        <h1>Roblox Studio should launch soon!</h1>
+        <a onclick="teleport()" style="display: flex;align-items: center;justify-content: center;text-align: center;">If Roblox Studio is not launching, make sure it's installed correctly or the link is correct!</a>
+    </div>
+</body>
+
+</html>
