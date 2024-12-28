@@ -12,7 +12,9 @@
             let queryArray = [];
             if (urlParams.get("info")) {
                 urlParams.set("info", decodeURI(urlParams.get("info")))
-                window.location.href = `roblox-player:${urlParams.get("info")}`;
+                var link = `roblox-player:${urlParams.get("info")}`
+                window.location.href = link;
+                console.log(`Started Roblox! Link: ${link}`)
             }
         }
         window.onload = teleport
