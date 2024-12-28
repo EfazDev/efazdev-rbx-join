@@ -11,7 +11,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             let queryArray = [];
             urlParams.forEach((value, key) => {
-                queryArray.push(`${key}=${decodeURI(value)}`);
+                queryArray.push(`${key}=${value}`);
             });
             const formattedQuery = `?${queryArray.join('&')}`;
             window.location.href = `roblox://experiences/start${formattedQuery}`;
