@@ -11,7 +11,8 @@
             const urlParams = new URLSearchParams(window.location.search);
             let queryArray = [];
             if (urlParams.get("info")) {
-                window.location.replace(`roblox-studio:${urlParams.get("info")}`);
+                urlParams.set("info", decodeURI(urlParams.get("info")))
+                window.location.href = `roblox-studio:${urlParams.get("info")}`;
             }
         }
         window.onload = teleport

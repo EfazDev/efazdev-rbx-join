@@ -15,6 +15,7 @@
                 urlParams.set("navigator", null)
                 urlParams.forEach((value, key) => {
                     if (value) {
+                        value = decodeURI(value)
                         queryArray.push(`${key}=${value}`);
                     }
                 });
