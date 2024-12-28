@@ -11,7 +11,6 @@
             const urlParams = new URLSearchParams(window.location.search);
             let queryArray = [];
             if (urlParams.get("info")) {
-                urlParams.set("info", decodeURI(urlParams.get("info")))
                 var link = `roblox-studio:${urlParams.get("info")}`
                 link = link.replace(" ", "+")
                 window.location.href = link;
