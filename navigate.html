@@ -12,7 +12,7 @@
             let queryArray = [];
             if (urlParams.get("navigator")) {
                 var stored_navigator = urlParams.get("navigator")
-                urlParams.set("navigator", null)
+                urlParams.delete("navigator")
                 urlParams.forEach((value, key) => {
                     if (value) {
                         queryArray.push(`${key}=${value}`);
